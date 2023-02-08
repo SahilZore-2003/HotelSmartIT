@@ -301,4 +301,6 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbzVDWE4625EnLITovbU5p
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => alert("Thanks for Ordering food! We Will serve You Soon..."))
                 .catch(error => console.error('Error!', error.message))
+
+                window.location.reload();
             })
