@@ -267,18 +267,18 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbzVDWE4625EnLITovbU5p
             document.querySelector('.buy').style.background = "grey";
             let order = document.getElementById('textorder');
         
-            const date = new Date();
+            // const date = new Date();
         
-            let day = date.getDate();
-            let month = date.getMonth() + 1;
-            let year = date.getFullYear();
+            // let day = date.getDate();
+            // let month = date.getMonth() + 1;
+            // let year = date.getFullYear();
             
         
-            // This arrangement can be altered based on how we want the date's format to appear.
-            let currentDate = `${day}-${month}-${year}`;
+            // // This arrangement can be altered based on how we want the date's format to appear.
+            // let currentDate = `${day}-${month}-${year}`;
             
         
-            order.value += currentDate+" ";
+            // order.value += currentDate+" ";
         
             let nameOfItem = document.querySelectorAll('.nameOfItem');
             nameOfItem.forEach(name => {
