@@ -1,0 +1,1155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- font awsome link  -->
+    <script src="https://kit.fontawesome.com/2e7d1698d6.js" crossorigin="anonymous"></script>
+    <title>Hotel Smart IT</title>
+</head>
+
+<body>
+
+    <!-- navbar starts  -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Hotel Smart IT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <a href="#"><i class="fa-solid fa-cart-shopping " id="cart"></i></a>
+        </button>
+
+    </nav>
+    <!-- <i class="fa-solid fa-xmark"></i> -->
+
+    <!-- navbar ends  -->
+
+    <!-- heading starts  -->
+    <div class="heading">
+        <div class="flex-col">
+            <div class="logo"><i class="fa-solid fa-hotel"></i></div>
+            <h2 class="text-center">Hotel Smart IT</h2>
+        </div>
+    </div>
+    <!-- heading ends  -->
+
+    <!-- menusection starts  -->
+
+    <div class="container my-4 pb-3">
+        <div class="flex ">
+            <div class="section" onclick="vegItem()">VEG</div>
+            <div class="section" onclick="NonVegItem()">NON VEG</div>
+        </div>
+
+        <div class="flex mt-4">
+            <div class="section" onclick="vegBreakFirst()">VEG BREAKFIRST</div>
+            <div class="section" onclick="NonVegBreakFirst()">NON VEG BREAKFIRST</div>
+        </div>
+
+
+        <div class="flex mt-4">
+            <div class="section" onclick="vegThali()">VEG THALI</div>
+            <div class="section" onclick="nonVegThali()">NON VEG THALI</div>
+        </div>
+
+
+
+        <div class="flex mt-4">
+            <div class="section" onclick="desert()">DESERT</div>
+            <div class="section" onclick="sweet()">SWEET</div>
+        </div>
+
+
+    </div>
+
+    <!-- menu sections ends  -->
+
+    <!-- cart section  -->
+<form action="#" autocomplete="off" name="google-sheet">
+
+    <div class="cartsection hide" id="cartSection">
+
+        
+
+            
+
+        <div class="buysection">
+            <input type="number" class="form-control my-3" id="table" name="table" placeholder="Enter Table Number" required>
+            <div class="flex-same">
+                <div class="amount">
+                    <input type="number" id="BillAmount" name="total" class="form-control" value="0" readonly>
+                    <span class="rupees">&#8377;</span>
+                </div>
+                <textarea name="order" id="textorder" cols="30" rows="10"></textarea>
+                <div class="buy"><button type="submit"  id="submit">ORDER</button></div>
+            </div>
+        </div>
+    </div>
+    
+    
+</form>
+    <!-- cart section ends  -->
+
+
+
+    <!-- veg section starts -->
+
+    <div class="vegitems">
+
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg/mixveg.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Mix Veg
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="120" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg/vegkolhapuri.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Veg Kolhapuri
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="130" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg/vegmalvani.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Veg Malvani
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="160" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg/vegbhuna.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Veg Bhuna
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="160" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg/bainganbharata.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Baingan Bharta
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="120" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg/bainganmalvani.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Baingan Malvani
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="130" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg/dalfry.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Dal Fry
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="100" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg/daltadaka.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Dal Tadaka
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="110" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg/dalkolhapuri.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Dal Kolhapuri
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="120" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg/shevbhaji.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Shev Bhaji
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="130" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="closeBtn" onclick="hide()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+    </div>
+
+    <!-- veg section ends  -->
+
+    <!-- nonveg section starts  -->
+
+    <div class="vegitems nonvegItem">
+
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="nonveg/muttonhandi.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Mutton Handi
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="530" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="nonveg/chikenhandi.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Chicken Handi
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="330" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="nonveg/gavranchikenhandi.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Gavran Chiken Handi
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="450" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="nonveg/muttonmasala.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Mutton Masala
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="200" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="nonveg/muttondry.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Mutton Dry
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="220" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="nonveg/chikenmasala.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Chicken Masala
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="160" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="nonveg/butterchickenmasala.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Butter Chicken Masala
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="190" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="nonveg/gavranchickenfry.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Gavran Chicken Fry
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="180" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="nonveg/gavranchickenmasala.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Gavran Chicken Masala
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="170" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="nonveg/muttonkharada.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Mutton Kharada
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="200" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="closeBtn" onclick="hideNonVeg()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+    </div>
+
+    <!-- nonveg section ends  -->
+
+    <!-- veg breakfirst  -->
+    <div class="vegitems vegBreakFirst">
+
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg breakfirst/misalpav.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Misal Pav
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="50" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg breakfirst/usalpav.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Usal Pav
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="40" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg breakfirst/samosaplate.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Samosa Plate
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="30" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg breakfirst/puri bhaji.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Puri Bhaji
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="60" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg breakfirst/kanda pohe.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Kande Pohe
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="30" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+
+
+
+        <div class="closeBtn" onclick="hideBreakFirst()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+    </div>
+
+    <!-- veg break ends  -->
+
+    <!-- non veg breakfirst  -->
+    <div class="vegitems nonVegBreakFirst">
+
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="non veg breakfirst/burjipav.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Burji Pav
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="60" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="non veg breakfirst/omletepav.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Omlete Pav
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="50" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="non veg breakfirst/vajari pav.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Vajadi Pav
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="70" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="non veg breakfirst/khimapav.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Khima Pav
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="90" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="non veg breakfirst/andapav.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Anda Pav
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="40" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+
+
+
+        <div class="closeBtn" onclick="hideNonVegBreakFirst()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+    </div>
+    <!-- non veg break first ends  -->
+
+    <!-- veg thali section / -->
+    <div class="vegitems vegthali">
+
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg thali/vehthali.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Veg Thali
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="120" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg thali/bangalithali.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Bangali Thali
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="130" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg thali/mahathali.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Maharashtrian Thali
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="140" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg thali/gujratithali.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Gujrati Thali
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="150" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg thali/panjabithali.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Panjabi Thali
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="160" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="veg thali/kolhapurithali.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Kolhapuri Thali
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="170" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+
+
+
+        <div class="closeBtn" onclick="hideVegThali()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+    </div>
+    <!-- veg thali ends  -->
+
+    <!-- non veg thali  -->
+    <div class="vegitems nonvegthali">
+
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="non veg thali/kolhapuri chicken thali.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Kolhapuri Chicken Thali
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="220" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="non veg thali/kolhapuri mutton thali.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Mutton Kolhapuri Thali
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="230" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="non veg thali/gavran chicken thali.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Gavran Chicken Thali
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="240" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="non veg thali/mutton masala thali.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Mutton Masala Thali
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="250" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="non veg thali/maharashhtrian chicken thali.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Maharashtrian Chicken Thali
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="260" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+
+
+
+
+
+        <div class="closeBtn" onclick="hideNonVegThali()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+    </div>
+    <!-- non veg thali ends  -->
+
+    <!-- desert section starts here  -->
+    <div class="vegitems desert">
+
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="desert/chocklate.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Chocklate Ice-Creame
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="20" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="desert/vanilla.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Vanilla Ice-Creame
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="30" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="desert/mint.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Mint Chocklate Chip
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="40" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="desert/chocklate chip.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Chocklate Chip
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="50" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="desert/butter scotch.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Butter scotch
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="60" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+
+
+
+
+
+        <div class="closeBtn" onclick="hideDesert()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+    </div>
+    <!-- desert section ends here  -->
+
+    <!-- sweet section starts  -->
+    <div class="vegitems sweet">
+
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="sweet/gulabjam.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Gulab Jamun
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="60" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="sweet/gajar halawa.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Gajar Ka Halwa
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="70" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="sweet/aamshrikhand.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Aam Shrikhand
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="80" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="sweet/puranpoli.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Puran Poli
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="75" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+        <div class="flex-col pt-4 item">
+            <div class="item-img">
+                <img src="sweet/rabadi.jpeg" alt="">
+            </div>
+            <div class="item-name text-center">
+                Rabadi
+            </div>
+            <div class="item-price">
+                <input type="number" name="" id="" class="form-control" value="80" readonly>
+                <span class="rupee">&#8377;</span>
+            </div>
+            <div class="">
+                <button type="button" class="btn btn-dark btn-lg btn-block cartBtn">Add to cart</button>
+            </div>
+
+            <hr>
+        </div>
+
+
+
+
+
+
+        <div class="closeBtn" onclick="hideSweet()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+    </div>
+    <!-- sweet section ends  -->
+    <!-- Optional JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

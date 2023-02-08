@@ -1,0 +1,230 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+i{
+    color: white;
+}
+
+.navbar-brand{
+    color: white !important;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+}
+.flex-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.heading h2{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.594);
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.logo i{
+    margin-top: 8rem;
+    color: black;
+    font-size: 50px;
+}
+
+
+.cartsection{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 3rem;
+   
+    padding: 20px 10px 2.5rem;
+   
+}
+
+input{
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+.form-control{
+    font-size: 1.5rem;
+}
+.hide{
+    display: none;
+}
+
+.cartImg img{
+    width: 150px;
+    border-radius: 10px;
+}
+
+#price{
+    border: none;
+    background-color: transparent;
+}
+
+b{
+    position: relative;
+    right: 35%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 2px solid rgba(0,0,0);
+}
+.buysection{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    color: white;
+}
+
+.buysection input{
+    text-align: center;
+    color: black !important;
+    font-weight: bold;
+}
+.flex-same{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.amount, .buy{
+    flex-basis: 50%;
+}
+.buy{
+    text-align: center;
+    font-weight: bold;
+   background-color:  #32CD32	;
+    
+    border-radius: 10px;
+}
+
+.buy button{
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.section{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 2px 10px 40px rgba(0,0,0,.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* vegitem div  */
+
+.vegitems{
+    width: 100%;
+    display: none;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 3.1rem;
+}
+
+.item-img img{
+    margin: 10 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.item-name{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.item-price input{
+    background-color: transparent !important;
+    color: black;
+    border: none;
+    outline: none;
+}
+.item{
+    border-bottom: .5px solid black;
+    background-color: white;
+}
+
+.item-price{
+    position: relative;
+}
+.rupee{
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.closeBtn i{
+    position: fixed;
+    top: 10%;
+    right: 2%;
+    color: black;
+    font-size: 1.5rem;
+    background: blacl;
+    background: black;
+    color: white;
+    padding: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.nonvegItem,.vegBreakFirst,.nonVegBreakFirst,.vegthali,.nonvegthali,.desert{
+    display: none;
+}
+
+
+.amount{
+    position: relative;
+}
+
+.rupees {
+    font-weight: bolder;
+    position: absolute;
+    font-size: 1.5rem;
+    top: 0%;
+    left: 90%;
+    color: black;
+}
+
+#textorder{
+    display: none;
+}
